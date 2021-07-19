@@ -8,6 +8,11 @@ This repository holds the React pair programming challenges for the Charlie 2021
 - The term `local/locally` means on your personal computer
 
 
+
+
+
+
+
 ### Naming Conventions
 - The name of the repository should NOT be included in the name of the project.
 - Branch name: `topic-initial1-initial2` (ex. state-a-s)
