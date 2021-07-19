@@ -5,6 +5,7 @@ This repository holds the React pair programming challenges for the Charlie 2021
 - Anything wrapped in `< >` is an indication that this will be named uniquely, the `< >` are NOT actually added to the command
 - `$` is an indication of a command line prompt, the `$` is not included
 - Anything in `( )` is informational and not included in the command
+- The term `local/locally` means on your personal computer
 
 
 ### Naming Conventions
@@ -59,7 +60,7 @@ Use these commands if you DO have the repository on your local machine but DON'T
 
 ### Have code locally that needs to go to GitHub?
 Use these commands to add the code you have on your local machine to GitHub:
-- $ `ls` (make sure you are in the correct directory) 
+- $ `ls` (make sure you are in the correct directory)
 - $ `git status` (informational command, ensure you are on the correct branch and in the correct directory)
 - $ `git add .`
 - $ `git commit -m "meaningful message here"`
