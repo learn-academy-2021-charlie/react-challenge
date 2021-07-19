@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+
+  </head>
+  <body>
+
+    <div id="react-container"></div> 
+    <!-- // determines where the react goes when tied with queryselector -->
+
+    <script type="text/babel">
+      class HelloReact extends React.Component{
+        render(){
+          return(
+              <>
+                <h1>My First React page!</h1>
+              <h2>second header</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum totam accusamus, alias animi reiciendis libero. At aperiam tenetur ipsum iste odio ipsam, fuga omnis delectus! Quia magnam nisi cumque provident.</p>
+              <form action="https://www.google.com/search?" name ="q">
+                <button>Google</button>
+                </form>
+                <Greeting />          
+              
+              </>
+          )
+        }
+      }
+       class Greeting extends React.Component{
+           render(){
+               return(
+                   <h3>YOOOOOOOO</h3>
+               )
+           }
+       }
+
+
+      const domContainer = document.querySelector('#react-container');
+      ReactDOM.render(<HelloReact />, domContainer); //render calls the class to be used
+    </script>
+
+
+  </body>
+</html>
