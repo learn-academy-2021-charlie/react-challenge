@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+
+/* .float-container {
+  border: 10px solid red;
+} */
+
+.float-child-1 {
+  width: 50%;
+  float: left;
+  /* border: 5px solid green; */
+}
+
+.float-child-2 {
+  width: 50%;
+  float: right;
+  /* border: 5px solid green; */
+}
+
+.numberBox {
+  cursor: pointer;
+  height: 400px;
+  width: 400px;
+  background-color: rgb(171, 171, 207);
+  display: grid;
+  place-items: center;
+  font-size: 100px;
+}
