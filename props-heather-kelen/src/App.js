@@ -28,12 +28,17 @@ class App extends Component{
   render(){
     return(
       <>
-        <h2>Dice Roller</h2>
-        <Dice
-        currentRoll={this.state.currentRoll}
-        handleClick={this.handleClick}
-         />
-        <Rolls rolls={this.state.rolls} clear={this.clear}/>
+        <div id='wrapper'>
+          <h2>Dice Roller</h2>
+          <div id='container'>
+            <Dice
+              id='dice'
+              currentRoll={this.state.currentRoll}
+              handleClick={this.handleClick}
+             />
+            <Rolls id='rolls' rolls={this.state.rolls} clear={this.clear}/>
+          </div>
+        </div>
       </>
     )
   }
