@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import '../App.css';
 
-// Log displays the array of all rolls so far
+// Log displays a roll
+//
 
 class Log extends Component {
 
   render(){
     return (
       <>
-      <p>Log</p>
+      <p> {this.props.roll} </p>
       </>
     )
   }
