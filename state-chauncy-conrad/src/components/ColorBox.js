@@ -10,19 +10,17 @@ class ColorBox extends Component {
     }
 
     changeColor = () => {
-
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * max);
-        }
-
-        this.setState({colorName: this.state.colorName[2]})
+        var randomColor = Math.floor(Math.random() * 5);
+        
+        this.setState({colorName: this.state.colorName[randomColor]})
     }
 
     render() {
-        console.log(this.state.colorName[2])
       return (
         <>
-          <div onClick={this.changeColor} style={{colorName: this.state.colorName}} id='square' >testing</div>
+          <div onClick={this.changeColor} style={{color: this.state.colorName}} className={`square ${this.state.colorName}`}>
+            {this.color}
+          </div>
         </>
       )
     }

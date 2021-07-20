@@ -9,6 +9,7 @@ class App extends Component {
     return (
       <>
         <ColorBox />
+        <ColorBox />
       </>
     )
   }
