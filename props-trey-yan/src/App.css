@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+.square {
+  display : square;
+  width: 25%;
+  height: 100px;
+  background-color: blue;
+  
+}
