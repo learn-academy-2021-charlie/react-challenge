@@ -4,13 +4,11 @@ class Roll extends Component {
     render() {
       return (
         <>
-         <div>
-            <div>
+            <div className="float-child">
                 <div>
-                   <div id="square2" > {this.props.roll}</div>
+                   <div className="oldRoll"> {this.props.roll}</div>
                 </div>
             </div>
-        </div>
         </>
       )
     }

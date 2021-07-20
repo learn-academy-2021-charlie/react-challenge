@@ -7,25 +7,29 @@ class App extends Component {
   constructor(){
     super()
     this.state={
-      diceArray: [1, 2, 3, 4, 5, 6],
-      currentRoll: 0
+      currentRoll: 1,
+      newArray: []
     }
   }
   rollDice = () => {
-    let randomNum = Math.floor(Math.random() * this.state.diceArray.length)
-    this.setState({currentRoll: randomNum})
+    let randomNum = Math.floor(Math.random() * 6 + 1)
+    // let newArray = this.state.newArray.concat(randomNum)
+    this.setState({currentRoll: randomNum, newArray: [...this.state.newArray, randomNum]})
+        console.log(this.state.newArray)
   }
 
   render() {
     return (
       <>
-        <Roll
-          roll={this.state.diceArray[this.state.currentRoll]}
-        />
+      <div className="float-container">
         <Dice 
-          roll={this.state.diceArray[this.state.currentRoll]}
+          roll={this.state.currentRoll}
           rollDice = {this.rollDice}
         />
+        <Roll
+          roll={this.state.newArray}
+        />
+      </div>
       </>
     )
   }
