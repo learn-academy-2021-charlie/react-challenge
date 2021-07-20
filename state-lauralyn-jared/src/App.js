@@ -20,7 +20,9 @@ changeColor = () => {
     return (
       <>
         <h1>Color Box</h1>
+        <div style={{backgroundColor: 'black'}}>
         <p onClick = {this.changeColor} >{this.state.color}</p>
+        </div>
       </>
     )
   }
