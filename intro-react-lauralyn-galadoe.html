@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+  </head>
+  <body>
+    <div id="react-container"></div>
+    <script type="text/babel">
+      class App extends React.Component{
+        render(){
+          return(
+            <>
+              <Header />
+              <Content />
+              <Footer />
+            </>
+          )
+        }
+      }
+      class Header extends React.Component {
+        render() {
+          return (
+            <>
+            <h1>Charlie Cohort 2021</h1>
+            </>
+          )
+        }
+      }
+      class Content extends React.Component {
+        render() {
+          var classNames = ["Austin", "Sarah", "Galadoe", "Lauralyn"]
+          var listNames = ""
+          {
+            for (let i = 0; i < classNames.length; i++) {
+              <><li>{classNames[i]}</li></>
+            }
+          }
+          return (
+            <>
+              <h3>Names of people in the class</h3>
+              <ul>
+                <li>Sarah</li>
+                <li>Austin</li>
+                <li>Lauralyn</li>
+                <li>Galadoe</li>
+                <li>Todd</li>
+              </ul>
+            </>
+          )
+        }
+      }
+      class Footer extends React.Component {
+        render() {
+          return (<h3>Galadoe and Lauralyn</h3>)
+        }
+      }
+      const domContainer = document.querySelector('#react-container');
+      ReactDOM.render(<App />, domContainer);
+    </script>
+  </body>
+</html>
