@@ -7,7 +7,7 @@ class Roll extends Component {
          <div>
             <div>
                 <div>
-                    
+                   <div id="square2" > {this.props.roll}</div>
                 </div>
             </div>
         </div>

@@ -6,8 +6,8 @@ class Dice extends Component {
         <>
         <div>
             <div>
-                <div>
-                    <div id="square"></div>
+                <div className='dice'>
+                    <div id="square" onClick={this.props.rollDice}> {this.props.roll}</div>
                     <h1>Click Box to Roll</h1>
                 </div>
             </div>
