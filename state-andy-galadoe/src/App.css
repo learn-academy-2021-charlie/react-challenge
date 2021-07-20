@@ -1,0 +1,11 @@
+.square {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+.text{
+  text-align: center;
+  color: white;
+}
