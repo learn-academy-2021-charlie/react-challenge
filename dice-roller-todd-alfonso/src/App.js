@@ -5,10 +5,27 @@ import React, { Component } from 'react';
 
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      result: 0,
+      resultsList: []
+    }
+
+  }
+
   rollDice = () => {
     console.log("rolling dice")
+    //generate a random number
+    const randomNumber = Math.ceil(Math.random() * 6)
+    console.log(randomNumber);
+    this.setState({result: randomNumber})
+    
+
   }
+
   render() {
+    console.log("current number:",this.state.result)
     return (
   
     <div className = "App">
@@ -18,7 +35,8 @@ class App extends Component {
        <Dice  diceFunction = {this.rollDice}  />
 
     </div>
-  );}
+  );
+}
 }
 
 export default App;
