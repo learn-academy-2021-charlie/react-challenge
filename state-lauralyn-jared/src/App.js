@@ -5,16 +5,22 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      color: "yellow"
+      colors: ["blue", "green", "yellow", "red"],
+      color: "brown"
     }
   }
+
+changeColor = () => {
+  const {colors} = this.state
+  let random = Math.floor (Math.random()* this.state.colors.length)
+  this.setState({color:colors[random]})
+}
 
   render(){
     return (
       <>
         <h1>Color Box</h1>
-        <p style={{color:"green"}}>This is a paragraph.</p>
-        
+        <p onClick = {this.changeColor} >{this.state.color}</p>
       </>
     )
   }

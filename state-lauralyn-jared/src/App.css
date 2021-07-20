@@ -5,5 +5,9 @@
 p {
   height: 200px;
   width: 200px;
-  background-color: blue;
+  background-color: white;
+}
+
+body {
+  background-color: teal
 }
