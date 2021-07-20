@@ -22,8 +22,8 @@ class App extends Component {
     return (
       <>
         <h1>Colored square</h1>
-        <button onClick={this.colorChange} style={{backgroundColor: this.state.currentColor}}> Press me!</button>
-        <p>"green"</p>
+        <button onClick={this.colorChange} style={{backgroundColor: this.state.currentColor}}> {this.state.currentColor}</button>
+        
 
       </>
     )
