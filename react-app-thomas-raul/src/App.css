@@ -1,0 +1,16 @@
+button{
+  height: 100px;
+  width: 100px;
+  margin-left: 450px;
+  margin-top: 150px;
+}
+
+h1{
+  position: center;
+  margin-left: 400px;
+  margin-top: 200px;
+}
+
+a:hover{
+  color: rgb(55, 151, 241);
+}
