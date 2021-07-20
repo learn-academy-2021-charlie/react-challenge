@@ -14,11 +14,11 @@ class Dice extends React.Component{
           <div className="Dice">
 
           <p>Dice Roller</p>
-
+          <p>Rolls {this.props.rollSum}</p>
           </div>
           </>
         )
       }
     }
-    
+
     export default Dice

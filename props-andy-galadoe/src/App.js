@@ -1,22 +1,34 @@
 import React, { Component } from 'react'
 import Dice from './components/Dice'
-import './App.css'
 import Rolls from'./components/Rolls'
+import './App.css'
+
 
 class App extends Component{
   constructor(props){
     super(props)
     this.state = {
+      rollSum: 0
 
     }
   }
+
+   // rollsGen = () => {
+   //   let randomNum = Math.floor(Math.random() * 6)
+   //   this.setState({count: randomNum})
+   // }
+
+   diceRoll = () => {
+       let rolls = Math.floor(Math.random() * 6) + 1;
+       this.setState({rollSum: rolls})
+     }
 
 
   render(){
     return(
       <>
-      <Dice />        
-      <p>Dice Roller</p>
+        <button onClick = {this.diceRoll}>Click Me!</button>
+      <Dice rollSum = {this.state.rollSum}/>
       </>
     )
   }

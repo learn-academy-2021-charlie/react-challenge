@@ -1,3 +1,19 @@
 import React, { Component } from 'react'
-import Dice from './components/Dice'
-import './App.css'
+
+class Rolls extends React.Component{
+    constructor(props){
+      super(props)
+      this.state = {
+      }
+    }
+    render(){
+        return(
+          <>
+          <div className="Rolls">
+          </div>
+          </>
+        )
+      }
+    }
+
+    export default Rolls
