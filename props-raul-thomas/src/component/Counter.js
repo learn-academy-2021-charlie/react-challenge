@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import DiceRoll from './DiceRoll';
 
-class Counter extends DiceRoll{
+class Counter extends Component{
   constructor(props){
     super (props)
   }
@@ -10,7 +10,7 @@ class Counter extends DiceRoll{
   <>
   
   <p>
-  {this.state.selectedAnswer}
+  {this.props.count} 
 
   </p>
   
