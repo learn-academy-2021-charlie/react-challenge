@@ -1,0 +1,37 @@
+html, body{
+  min-height: 100%;
+  background-color: #009900;
+}
+#inventory{
+  justify-self: flex-start;
+}
+#cart{
+  justify-self: flex-end;
+}
+#container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  height: 700px;
+}
+#inventory-container{
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+}
+#cart-container{
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+}
+#food-button{
+  width: 150px;
+  height: 100px;
+  background-color: #ffff99;
+}
+#cart-item{
+  background-color: #ffff99;
+}
+h2{
+  background-color: #ffff99;
+}
