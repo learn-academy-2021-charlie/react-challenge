@@ -1,3 +1,12 @@
+
+.body {
+    background-image: url("https://blogs.vmware.com/sase/files/2018/03/Image_o-GROCERY-STORE-facebook.jpg");
+}
+
+#background-logo {
+    height: 200px;
+}
+
 h1 {
     text-align: center;
 }

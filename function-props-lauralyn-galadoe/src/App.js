@@ -27,19 +27,22 @@ class App extends Component {
   render(){
     return(
       <>
-        <h1>Grocery Shopping</h1>
+        
+        <h1>Grocery Shopping</h1> 
         
         <h3>Food Items</h3>
-          <Food items = {this.state.food} addItem={this.addItem}/>
+          <Food items = {this.state.food} addItem={this.addItem} allItems={this.state.groceryList}/>
         
         <h3>Toiletries</h3>
           <Food items = {this.state.toiletries} addItem={this.addItem}/>
         
         <h3>Office Supplies</h3>
         <Food items = {this.state.officeSupplies} addItem={this.addItem}/>
-        
-        {/* console.log(groceryList.keys()) */}
-        
+               
+        <h3>More</h3>
+        <Food items={Object.entries(this.state.groceryList)}
+            addItem={this.addItem}/>
+
         <h2>Food in Cart</h2>
         <ul>
           { this.state.selectItems.map(item => {
@@ -48,6 +51,13 @@ class App extends Component {
             )
           })}
         </ul>
+
+        {console.log(Object.entries(this.state.groceryList)
+            .map( ([key, value]) => key ))}
+      
+        {console.log(Object.entries(this.state.groceryList)
+            .map( ([key, value]) => value ))}
+
       </>
     )
   }

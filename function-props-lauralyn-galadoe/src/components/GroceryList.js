@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Food extends Component {
+class GroceryList extends Component {
 
 
   render(){
@@ -8,7 +8,7 @@ class Food extends Component {
     return(
       <>
         <ul>
-          {this.props.items.map(value => {
+          {this.props.items.map(([key, value]) => {
             return (
               <li>
                 <button onClick ={ () => this.props.addItem(value)}>
