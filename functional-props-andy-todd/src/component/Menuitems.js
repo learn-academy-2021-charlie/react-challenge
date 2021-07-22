@@ -3,13 +3,17 @@
 
  class MenuItems extends Component {
   render() {
+    console.log(this.props,"this is on the menu items")
     return (
       <>
           <ul>
+        {this.props.items.map(value => {
+          return <>
+
+          <button onClick= {this.props.addItem} >{value}</button>
+          </>
+        })}
             
-            <li>Cheeseburger $4.50</li>
-            <li>Fries $1.50</li>
-            <li>Hot Dog $2.00</li>
           </ul>
       </>
     )

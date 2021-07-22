@@ -9,7 +9,11 @@ class App extends Component{
   super (props)  
   this.state = {
     cart: [],
-    menuItems: ["Cheeseburger $4.50","Fries $1.50","Hot Dog $2.00"]
+    menuItems: [
+      "Cheeseburger $4.50", 
+      "Fries $1.50", 
+      "Hot Dog $2.00"
+    ]
   }}
  
 addItem=(item =>{
@@ -22,7 +26,9 @@ render(){
   <>
   <h1> Cheesey Joe's </h1>
 
-  < MenuItems onClick />
+  < MenuItems addItem ={this.addItem} items ={
+    this.state.menuItems
+  } />
  
   </>
   )
