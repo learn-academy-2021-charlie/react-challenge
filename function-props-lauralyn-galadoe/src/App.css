@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+}
+
+h3 {
+    margin-left: 50px;
+}
+
+h2 {
+    margin-left: 50px;
+}
+
+button {
+    background-color: #d0bae3;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 5px;
+}

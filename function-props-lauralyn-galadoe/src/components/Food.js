@@ -1,20 +1,18 @@
 import React, { Component } from 'react'
 
 class Food extends Component {
-  constructor(props){
-    super(props)
-  }
 
 
   render(){
     return(
       <>
-        <h2>Testing Food</h2>
         <ul>
-          {this.props.foodItems.map(value => {
+          {this.props.items.map(value => {
             return (
               <li>
-              <button onClick = "">{value}</button>
+                <button onClick ={ () => this.props.addItem(value)}>
+                {value}
+                </button>
               </li>
             )
           })}
