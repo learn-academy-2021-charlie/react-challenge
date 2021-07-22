@@ -5,11 +5,11 @@ class Items extends Component {
         return (
             <>
             <ul>
-                {Object.values(this.props.cartItems).map(value => {
+                {Object.values(this.props.cartItems).map((value) => {
                 return (
                     <li>
-                        <button onClick={() => this.props.addItem(value)}>
-                            {value}
+                        <button  onClick={() =>  this.props.addItem(value[0], value[1])}>
+                            Item: {value[0]}{", "} price: {value[1]}
                         </button>
                     </li>
                 )
