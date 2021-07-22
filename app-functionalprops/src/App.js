@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import React, { Component } from 'react'
 import './App.css';
 import List from './component/List';
+import Product from './component/product';
 class App extends Component {
   constructor(props){
     super(props)
@@ -55,6 +56,8 @@ formatCount = () =>{
         <h3>money</h3>
         <List cartItem={this.state.money}
         addItem={ this.addCount} />
+        <Product grocery={this.state.total}
+         addItem={this.addProduct}/>
         <h3>Cart</h3>
         <h4>Total:${this.formatCount()}</h4>
           <ul>

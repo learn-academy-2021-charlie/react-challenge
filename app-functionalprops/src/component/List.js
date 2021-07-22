@@ -13,7 +13,8 @@ class List extends Component {
                 <button onClick={() => this.props.addItem(value)}>
                   {value}
                 </button>
-              </li>
+            
+            </li>
             )
           })}
         </ul>
