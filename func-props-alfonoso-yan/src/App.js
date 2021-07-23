@@ -40,27 +40,27 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <h1>Pizza Hut</h1>
-        <h2>Pizza</h2>
+        <h3>Pizza</h3>
         <Order 
         orderItem = {this.state.pizza}
         addItem = {this.addItem}
         />
-        <h2>Sandwiches</h2>
+        <h3>Sandwiches</h3>
         <Order 
         orderItem = {this.state.sandwiches}
         addItem = {this.addItem}
         />
-        <h2>Pasta</h2>
+        <h3>Pasta</h3>
         <Order 
         orderItem = {this.state.pasta}
         addItem = {this.addItem}
         />
-        <h2>Desserts</h2>
+        <h3>Desserts</h3>
         <Order 
         orderItem = {this.state.desserts}
         addItem = {this.addItem}
         />
-        <h2>Drinks</h2>
+        <h3>Drinks</h3>
         <Order 
         orderItem = {this.state.drinks}
         addItem = {this.addItem}
