@@ -4,15 +4,14 @@ class GroceryList extends Component {
 
 
   render(){
-
-    return(
+    return(        
       <>
         <ul>
-          {this.props.items.map(([key, value]) => {
+          {this.props.items.map((item, key) => {
             return (
-              <li>
-                <button onClick ={ () => this.props.addItem(value)}>
-                {value}
+              <li key={key}>
+                <button onClick ={ () => this.props.total(item.name, item.price)}>
+                {item.name}
                 </button>
               </li>
             )
@@ -22,4 +21,4 @@ class GroceryList extends Component {
     )
   }
 }
-export default Food
+export default GroceryList

@@ -1,6 +1,7 @@
 import React, { Component} from 'react'
 import './App.css'
 import Food from './components/Food'
+import GroceryList from './components/GroceryList'
 
 class App extends Component {
   constructor(props){
@@ -8,19 +9,27 @@ class App extends Component {
     this.state = {
       food: ["Pasta $2.00", "Beef Taco $2.00", "Cheeseburger $2.45", "Pizza $3.75", "Milk $2.00"],
       toiletries: ["Toilet Paper $3.00", "Body Wash $4.15", "Shampoo $3.19", "Conditioner $4.19", "Toothpaste $4.99", "Tooth Brush $2.00"],
-      groceryList: {
-        pasta: 2,
-        taco: 2,
-        pizza: 3.75
-      },
+      groceryList: [
+        {name: "pasta", price: 2},
+        {name: "taco", price: 2.15},
+        {name: "pizza", price: 3.75}
+      ],
       officeSupplies: ["Paper $2.15", "Scissors $1.50", "Rim of Sheets $9.00", "Post It Notes $3.99", "Pen $1.00"],
-      selectItems: []
+      selectItems: [],
+      total: 0
     }
   }
 
   addItem = (item) => {
     this.setState(
       { selectItems: [...this.state.selectItems, item] }
+    )
+  }
+
+  total = (itemName, itemPrice) => {
+    this.addItem(itemName)
+    this.setState(
+      {total: this.state.total + itemPrice}
     )
   }
 
@@ -40,10 +49,10 @@ class App extends Component {
         <Food items = {this.state.officeSupplies} addItem={this.addItem}/>
                
         <h3>More</h3>
-        <Food items={Object.entries(this.state.groceryList)}
-            addItem={this.addItem}/>
+        <GroceryList items={this.state.groceryList} total={this.total}/>
 
         <h2>Food in Cart</h2>
+        <h4>Total: {this.state.total}</h4>
         <ul>
           { this.state.selectItems.map(item => {
             return (
@@ -51,12 +60,6 @@ class App extends Component {
             )
           })}
         </ul>
-
-        {console.log(Object.entries(this.state.groceryList)
-            .map( ([key, value]) => key ))}
-      
-        {console.log(Object.entries(this.state.groceryList)
-            .map( ([key, value]) => value ))}
 
       </>
     )
