@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+
+  </head>
+  <body>
+
+    <div id="react-container"></div>
+
+    <script type="text/babel">
+      class HelloReact extends React.Component{
+        render(){
+          return(
+          <>
+            <h1>Playing around with React</h1>
+            <h2>Multiple Outputs</h2>
+            <p> Still trying to understand this blending between JavaScript and HTML. It is helpful to practice. JSX is a language that is very similar to HTML. In order for this to render on the page it needs to be within a class that is extending a react component. Next a component function is created so it can tell react where this needs to be showing. In our case the react-container div. Then this class is gets called by using the function render with the class your calling and the div location you want it to render in.</p>
+
+            <Greeting />
+            // This is a component call! It is calling on the greeting class making it set into motion.
+
+            </>
+          )
+        }
+      }
+
+      class Greeting extends React.Component{
+        render(){
+          return(
+          <>
+          // React fragments that help to create containers necessary.
+            <h2>Hello, here is more React</h2>
+            <p> However we are doing nested components now!</p>
+            </>
+            // This is not showing yet because we have not called on this class. If you want it to get rendered then call it in the parent class..
+          )
+
+        }
+      }
+      const domContainer = document.querySelector('#react-container');
+      ReactDOM.render(<HelloReact />, domContainer);
+    </script>
+  </body>
+</html>
