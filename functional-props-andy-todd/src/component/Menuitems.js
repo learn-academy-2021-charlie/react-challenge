@@ -3,14 +3,15 @@
 
  class MenuItems extends Component {
   render() {
-    console.log(this.props,"this is on the menu items")
     return (
       <>
           <ul>
         {this.props.items.map(value => {
           return <>
 
-          <button onClick= {this.props.addItem} >{value}</button>
+          <button onClick = {() => this.props.addItem(value)}>
+            {value}
+          </button>
           </>
         })}
             

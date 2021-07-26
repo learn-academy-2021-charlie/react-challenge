@@ -8,21 +8,20 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      rollSum: 0
+      rollSum: 0,
+      myRolls: []
 
     }
   }
-
-   // rollsGen = () => {
-   //   let randomNum = Math.floor(Math.random() * 6)
-   //   this.setState({count: randomNum})
-   // }
 
    diceRoll = () => {
        let rolls = Math.floor(Math.random() * 6) + 1;
        this.setState({rollSum: rolls})
      }
-
+  rollTracker = () =>{
+    let loggedRolls = rolls
+    this.setState({myRolls.push(rolls)})
+  }
 
   render(){
     return(
