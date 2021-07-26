@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import Goodbot from './Component/Goodbot';
 
 class App extends Component{
   constructor(props){
@@ -17,14 +18,18 @@ class App extends Component{
 
   render(){
     return(
-      <React.Fragment>
-        <input
+      <>
+        
+        <input 
           type="text"
           value={ this.state.userInput }
           onChange={ this.handleChange }
         />
         <p>{ this.state.userInput }</p>
-      </React.Fragment>
+        <Goodbot
+       goodBot = {this.state.userInput}
+        />
+      </>
     )
   }
 }
