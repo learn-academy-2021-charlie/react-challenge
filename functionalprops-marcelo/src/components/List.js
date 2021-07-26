@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class List extends Component {
     render() {
         return (
-            <div>
+            <>
                 <h1>My cart list</h1>
                 <h3>Item</h3>
                 <ul>{this.props.itemList.map((value, index) => {
@@ -20,7 +20,7 @@ class List extends Component {
                     )
                     })}
                 </ul>
-            </div>
+            </>
         );
     }
 }
