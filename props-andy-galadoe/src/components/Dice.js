@@ -7,14 +7,18 @@ class Dice extends React.Component{
       this.state = {
       }
     }
+    diceRoll = () => {
+      let rolls = Math.floor(Math.random() * 6) + 1;
+      this.setState({rollSum: rolls})
+    }
 
     render(){
         return(
           <>
-          <div className="Dice">
+          <div className="Dice" >
 
-          <p>Dice Roller</p>
-          <p>Rolls {this.props.rollSum}</p>
+          
+          <p onClick = {this.diceRoll}>  Dice Roller {this.props.rollSum}</p>
           </div>
           </>
         )

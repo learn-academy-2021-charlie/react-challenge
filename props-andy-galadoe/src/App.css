@@ -1,6 +1,12 @@
 .Dice {
   display: flex;
-  width: 100px;
-  height: 100px;
+  width: 600px;
+  height: 600px;
   background-color: red;
+  text-align: center;
+  font-size: xx-large;
+  font-family: sans-serif;
+  
+  
+
 }
