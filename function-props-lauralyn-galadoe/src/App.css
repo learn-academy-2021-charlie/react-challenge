@@ -1,0 +1,36 @@
+
+.body {
+    background-image: url("https://blogs.vmware.com/sase/files/2018/03/Image_o-GROCERY-STORE-facebook.jpg");
+}
+
+#background-logo {
+    height: 200px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-left: 50px;
+}
+
+h3 {
+    margin-left: 50px;
+}
+
+h4 {
+    margin-left: 50px;
+}
+
+button {
+    background-color: #d0bae3;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 5px;
+}
