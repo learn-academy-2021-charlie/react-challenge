@@ -1,0 +1,40 @@
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  /* background: white; */
+  /* position: fixed; */
+  /* border: 1em black solid; */
+  /* top: 50%; */
+  /* left: 50%;
+  margin-top: -50px;
+  margin-left: -100px; */
+  /* text-align: center; */
+}
+
+body {
+  background-color: grey;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.purple {
+  background-color: purple;
+}
+.orange {
+  background-color: orange;
+}
+
+.red {
+  background-color: red;
+}
